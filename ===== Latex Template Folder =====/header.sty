@@ -1,0 +1,46 @@
+\ProvidesPackage{header}
+
+% Math
+\usepackage{amsmath}
+
+% Visual
+\usepackage{graphicx} % For images
+\graphicspath{ {figures/} }
+
+\usepackage{float} % For image positioning
+
+\usepackage{geometry} % For margins
+\geometry{lmargin=2cm, rmargin=2cm, tmargin=2cm, bmargin=2cm}
+
+\usepackage{fancyhdr} % For headers and footers
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[]{}
+\fancyfoot[C]{\thepage}
+
+\usepackage{pdfpages}
+
+\setlength{\parindent}{0pt} % No indent for paragraphs
+\usepackage{parskip} % For paragraph spacing
+
+% Tables
+\usepackage{booktabs} % For better hrule in tables
+
+% Code
+\usepackage{listings} % For code blocks
+
+% Bibliography
+\usepackage[style=ieee,sorting=none]{biblatex}
+\addbibresource{bibliography.bib} %Import the bibliography file
+\setlength\bibitemsep{5pt}
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+
+\usepackage{xpatch}
+\xpatchbibdriver{online}
+  {\printtext[parens]{\usebibmacro{date}}}
+  {\iffieldundef{year}{}{\printtext[parens]{\usebibmacro{date}}}}
+  {}{}  
+
+\usepackage[main=british]{babel}
+\usepackage{csquotes}

@@ -1,0 +1,58 @@
+\ProvidesPackage{header}
+
+% Math
+\usepackage{amsmath}
+
+% Visual
+\usepackage{graphicx} % For images
+\graphicspath{ {figures/} }
+
+\usepackage{float} % For image positioning
+
+\usepackage{geometry} % For margins
+\geometry{a2paper, lmargin=2cm, rmargin=2cm, tmargin=2cm, bmargin=2cm}
+
+\usepackage{fancyhdr} % For headers and footers
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[]{}
+\fancyfoot[C]{\thepage}
+
+\usepackage{pdfpages}
+
+\setlength{\parindent}{0pt} % No indent for paragraphs
+\usepackage{parskip} % For paragraph spacing
+
+% Tables
+\usepackage{booktabs} % For better hrule in tables
+
+% Code
+\usepackage{listings} % For code blocks
+
+% Bibliography
+% \usepackage[style=ieee,sorting=none]{biblatex}
+% \addbibresource{bibliography.bib} %Import the bibliography file
+% \setlength\bibitemsep{5pt}
+% \setcounter{biburllcpenalty}{7000}
+% \setcounter{biburlucpenalty}{8000}
+
+% \usepackage{xpatch}
+% \xpatchbibdriver{online}
+%   {\printtext[parens]{\usebibmacro{date}}}
+%   {\iffieldundef{year}{}{\printtext[parens]{\usebibmacro{date}}}}
+%   {}{}  
+
+\usepackage[main=british]{babel}
+\usepackage{csquotes}
+
+% Flow Chart
+\usepackage{tikz}
+
+\usetikzlibrary{shapes.geometric, arrows.meta, fit, positioning, backgrounds}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, text width=3cm, draw=black, fill=blue!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, text width=3cm, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, text width=3cm, draw=black, fill=green!30]
+
+\tikzstyle{arrow} = [thick,->,>=stealth]
