@@ -10,6 +10,8 @@ This guide is losely based on the google and Univercity of Cantubury style guide
     - [Indentation and Line Length](#Indentation-and-Line-Length)
 - [Comments](#Comments)
     - [File Comments](#File-Comments)
+    - [Function Comments](#Function-Comments)
+    - [Variable and Constants Comments](#Variable-and-Constants-Comments)
   
 # Example
 The easiest way to start off is with an example below is an example of a c header and source file with the styles implemented correctly. These files along with templates can be found in the same folder as this guide.
@@ -35,6 +37,7 @@ This section details the general formating of files.
 
 - All files end with one blank new line.
 
+- Mathmatical and assignments expresions will always have a space between numbers/values and operators
 - Brackets will be used even when optional unless it reduces readability (in some mathmatical expressions for example).
 ```c
 int y = 4 + (5 * 6); // Good
@@ -53,8 +56,6 @@ int function (void) {
 }
 ```
 
-- Mathmatical and assignments expresions will always have a space between numbers/values and operators
-
 - Use a single space after a comma in a function call etc.
 
 ## Indentation and Line Length
@@ -63,15 +64,17 @@ Indetation is always using **spaces** with an indent of 4 spaces per level.
 Lines will not exceed 80 columns unless it is part of a link, is a string literal were new line characters can affect it or by developer discretion. This limit is to improve writing of code in a split window configuration.
 
 # Comments
-Comments are vitaly important and should be used anyware that code may become hard to understand. All files should conform to the doxgen commenting standard even if doxgen is not intended to be run on the code. This is done to improve standardisation and I like the way it looks.
+Comments are vitaly important and should be used anywhere that code may become hard to understand. All files should conform to the doxgen commenting standard even if doxgen is not intended to be run on the code. This is done to improve standardisation and I like the way it looks.
+
+Not all comments in files need to be doxgen comments only text that is directly relevant to variables, functions etc. should be in the doxgen style. General comments regarding code should be done using the `//` style of comment ether inline or the line before depending on what makes more sense for readability. If a block of text is needed the `/* */` can be used but this should be avoided to reduce confusion around what is doxgen viewed and what is not.
+
+## Doxgen Summary
+Doxgen is a documentation software that creates a manaul just from your source code (Assuming that you comment the code correctly). Doxgen looks at the comments in your code to pull this information. While doxgen does allow the use of the \ character to prefix commands the @ should be used to improve searching and differenacal. Three comment styles for information should be used these can be seen below.
 
 Doxgen Refences:
 
 - [Usage Example](https://fnch.users.sourceforge.net/doxygen_c.html)
 - [Doxgen Manual](https://doxygen.nl/manual/docblocks.html)
-
-## Doxgen Summary
-Doxgen is a documentation software that creates a manaul just from your source code (Assuming that you comment the code correctly). Doxgen looks at the comments in your code to pull this information. While doxgen does allow the use of the \ character to prefix commands the @ should be used to improve searching and differenacal. Three comment styles for information should be used these can be seen below.
 
 A line above comment:
 ```c
@@ -115,13 +118,13 @@ All functions including class methods should be commented using the doxgen stand
 /**
  * @brief Change the led state and get its previous state
  *
- * This funcion uses digitalWrite() to chnage an leds state
- * @param led the led to change the state of
+ * This funcion uses digitalWrite() to chnage an leds state    // Optional
+ * @param led the led to change the state of                   // Don't include if this is void
  * @param state the state to set the led to
  *
- * @return the previous state of the led
+ * @return the previous state of the led                       // Don't include if this is void
  *
- * @see digitalWrite
+ * @see digitalWrite                                           // All below this is optional
  * @note this only works if an led is connected to the pin
  * @warning there must be a current limiting resistor in series with the led
  */
@@ -129,7 +132,25 @@ bool ledSet(int led, bool state) {
     // Code
 }
 ```
-Often 
+Often not all of the parts of this example are needed especially the lower sections it is up to the developer to decied what is nessasary. At a bare minium a function should have an `@brief`.
+
+## Variable and Constants Comments
+All global, class, and static function variables should contain doxgen comments describing their use. All other variables (eg. local function variables) do not need doxgen and may not even need c style comments if they are named correctly and used for only one purpose.
+
+All constants both macros and `const` should be commented with doxgen notation as they are important for documentation.
+
+# Functions
+
+# Variables and structs
+
+# Constants
+
+# Includes
+
+# Header Files
+
+
+
 
 
 
