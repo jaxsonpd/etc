@@ -132,12 +132,27 @@ bool ledSet(int led, bool state) {
     // Code
 }
 ```
-Often not all of the parts of this example are needed especially the lower sections it is up to the developer to decied what is nessasary. At a bare minium a function should have an `@brief`.
+Often not all of the parts of this example are needed especially the lower sections it is up to the developer to decied what is nessasary. At a bare minium a function should have an `@brief`. Functions should be commented in their header file if possible (obviously not if its a static function etc.).
 
 ## Variable and Constants Comments
 All global, class, and static function variables should contain doxgen comments describing their use. All other variables (eg. local function variables) do not need doxgen and may not even need c style comments if they are named correctly and used for only one purpose.
 
 All constants both macros and `const` should be commented with doxgen notation as they are important for documentation.
+
+# Naming
+- Files => PFX_PascalCase - Where the prefix is a three letter abreviation for the module
+- Structs => PFX_PascalCase
+- Types => camelCase_t
+
+- Pointers => p_camelCase
+- Global Variables => g_camelCase
+- Local Variables => camelCase
+- Const Variables => ALL_CAPS
+- Enums => camelCase_e
+- Enum Members => ALL_CAPS
+
+- Exposed Functions => PFX_camelCase
+- Local Functions & macros => camelCase
 
 # Functions
 
@@ -146,6 +161,14 @@ All constants both macros and `const` should be commented with doxgen notation a
 # Constants
 
 # Includes
+Includes should occur directly after the file comment block and have the following structure:
+
+1. C standard header files
+2. C++ standard header files
+3. Custom made utility header files
+4. Custom made header files that provide functionality
+
+An example of custom utitility files would be special string processing functions etc.
 
 # Header Files
 
