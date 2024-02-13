@@ -147,7 +147,8 @@ All constants both macros and `const` should be commented with doxgen notation a
 - Pointers => p_camelCase
 - Global Variables => g_camelCase
 - Local Variables => camelCase
-- Const Variables => ALL_CAPS
+- Const Variables => c_camelCase
+- Macros => ALL_CAPS
 - Enums => camelCase_e
 - Enum Members => ALL_CAPS
 
@@ -155,22 +156,37 @@ All constants both macros and `const` should be commented with doxgen notation a
 - Local Functions & macros => camelCase
 
 # Functions
+All functions should be commented as described in the previous sections. Were possible functions should be definied before their use without the use of pre declerations. Functions should contain first the decliration of their local variables then the return variable if applicable can be precided by r_ then the code. Functions should aim to contain less than 10 lines of actual code (not including variable assignment etc.), but this is not a hard rule.  
 
 # Variables and structs
+Global variables and structs should be declared after includes and constants/macros with structs before variables. Structs should often be declared using typedef in the following form:
 
-# Constants
+```c
+typedef struct {
+    structMember;
+} structName;
+```
+# Constants, Enums and Macros
+Global constants, enums and macros should be declared after the includes in a file, with macros before constants. Local constants (Do not use macros as local constants as they are not) should be defined at the top of the function before the local variables. When selecting between using a gloabl macro, a global constant and a local constant the following should be considered:
+
+1. Is this functioning as a configuration option (use a macro)
+2. Is it functioning as a no configurable value in an equation (use a constant)
+3. Is this value only ever used in this function (use a local constant)
+4. Is this value part of a group of other values that have easy numerical values (Use an enum)
 
 # Includes
-Includes should occur directly after the file comment block and have the following structure:
+Includes should occur directly after the file comment block and have the following structure (with new lines in between each block):
 
 1. C standard header files
 2. C++ standard header files
 3. Custom made utility header files
 4. Custom made header files that provide functionality
+5. The header file for the file itself (if it is a source file)
 
 An example of custom utitility files would be special string processing functions etc.
 
 # Header Files
+Header files should share the same name as the source file. The header file should contain all function description comments for the module. 
 
 
 
