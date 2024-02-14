@@ -12,6 +12,12 @@ This guide is losely based on the google and Univercity of Cantubury style guide
     - [File Comments](#File-Comments)
     - [Function Comments](#Function-Comments)
     - [Variable and Constants Comments](#Variable-and-Constants-Comments)
+- [Naming](#Naming)
+- [Functions](#Functions)
+- [Variables and structs](#Variables-and-structs)
+- [Constants, Enums and Macros](#Constants,-Enums-and-Macros)
+- [Includes](#Includes)
+- [Header Files](#Header-Files)
   
 # Example
 The easiest way to start off is with an example below is an example of a c header and source file with the styles implemented correctly. These files along with templates can be found in the same folder as this guide.
@@ -151,8 +157,9 @@ All constants both macros and `const` should be commented with doxgen notation a
 | -------- | ---------------- |
 | Pointers | `p_camelCase` |
 | Global Variables | `g_camelCase` |
-| Local Variables | `camelCase` |
 | Const Variables | `c_camelCase` |
+| Return Variables | `r_camelCase` |
+| Local Variables | `camelCase` |
 | Defines | `ALL_CAPS` |
 | Enums | `camelCase_e` |
 | Enum Members | `ALL_CAPS` |
@@ -165,7 +172,7 @@ All constants both macros and `const` should be commented with doxgen notation a
 Where the PFX is a three letter abreviation for the module
 
 # Functions
-All functions should be commented as described in the previous sections. Were possible functions should be definied before their use without the use of pre declerations. Functions should contain first the decliration of their local variables then the return variable if applicable can be precided by r_ then the code. Functions should aim to contain less than 10 lines of actual code (not including variable assignment etc.), but this is not a hard rule.  
+All functions should be commented as described in the previous sections. Were possible functions should be definied before their use without the use of pre declerations. Functions should contain first the decliration of their local variables then the return variable if applicable can be precided by 'r_' then the code. Functions should aim to contain less than 10 lines of actual code (not including variable assignment etc.), but this is not a hard rule.  
 
 # Variables and structs
 Global variables and structs should be declared after includes and constants/macros with structs before variables. Structs should often be declared using typedef in the following form:
