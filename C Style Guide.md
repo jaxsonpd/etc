@@ -15,7 +15,7 @@ This guide is losely based on the google and Univercity of Cantubury style guide
 - [Naming](#Naming)
 - [Functions](#Functions)
 - [Variables and structs](#Variables-and-structs)
-- [Constants, Enums and Macros](#Constants,-Enums-and-Macros)
+- [Constants, Enums and Macros](#Constants-Enums-and-Macros)
 - [Includes](#Includes)
 - [Header Files](#Header-Files)
   
