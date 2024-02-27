@@ -1,0 +1,82 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "final_space": true,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "session",
+          "style": "plain",
+          "foreground": "#FFE082",
+          "template": "@{{ .UserName }} ➜"
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "#56B6C2",
+          "template": " {{ .Path }} ",
+          "properties": {
+            "style": "agnoster_short"
+          }
+        },
+        {
+          "type": "go",
+          "style": "powerline",
+          "foreground": "#7FD5EA",
+          "template": "(\ue626{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}) "
+        },
+        {
+          "type": "python",
+          "style": "powerline",
+          "foreground": "#9e7eff",
+          "template": "(\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}) "
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "#56B6C2",
+          "template": "<#E8CC97>git(</>{{ .HEAD }}<#E8CC97>) </>",
+          "properties": {
+            "branch_icon": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "battery",
+          "style": "powerline",
+          "foreground": "#193549",
+          "foreground_templates": [
+            "{{if eq \"Charging\" .State.String}}#64B5F6{{end}}",
+            "{{if eq \"Discharging\" .State.String}}#E36464{{end}}",
+            "{{if eq \"Full\" .State.String}}#66BB6A{{end}}"
+          ],
+          "template": "[{{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}\uf295]",
+          "properties": {
+            "charged_icon": "\ue22f ",
+            "charging_icon": "\ue234 ",
+            "discharging_icon": "\ue231 "
+          }
+        },
+        {
+          "type": "executiontime",
+          "style": "powerline",
+          "foreground": "#FFAB91",
+          "template": "{{ .FormattedMs }}",
+          "properties": {
+            "always_enabled": true,
+            "style": "austin",
+            "threshold": 1
+          }
+        }
+      ]
+    }
+  ]
+}
