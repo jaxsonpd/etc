@@ -14,11 +14,8 @@ to create a new $PROFILE file.
 
 then add new prompt to $PROFILE using:
 ```
-& ([ScriptBlock]::Create((oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\huvix.omp.json" --print) -join "`n"))
+& ([ScriptBlock]::Create((oh-my-posh init pwsh --config "https://raw.githubusercontent.com/jaxsonpd/etc/main/Configs/.huvix_JD.omp.json" --print) -join "`n"))
 ```
-my defualt profile is:
-
-https://raw.githubusercontent.com/jaxsonpd/etc/main/Configs/.huvix_JD.omp.json
 
 then reload the profile using: 
 ```
@@ -39,7 +36,7 @@ and remember to add to path.
 Add a new theme to the prompt using:
 
 ```
-eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/huvix.omp.json)"
+eval "$(oh-my-posh init bash --config "https://raw.githubusercontent.com/jaxsonpd/etc/main/Configs/.huvix_JD.omp.json")"
 ```
 
 reload the profile using:
