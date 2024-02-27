@@ -16,6 +16,9 @@ then add new prompt to $PROFILE using:
 ```
 & ([ScriptBlock]::Create((oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\huvix.omp.json" --print) -join "`n"))
 ```
+my defualt profile is:
+
+https://raw.githubusercontent.com/jaxsonpd/etc/main/Configs/.huvix_JD.omp.json
 
 then reload the profile using: 
 ```
