@@ -72,11 +72,11 @@
           "template": "{{ .FormattedMs }}",
           "properties": {
             "always_enabled": true,
-            "style": "austin",
-            "threshold": 1
+            "style": "austin"
           }
         }
-      ]
+      ],
+      "newline": false
     }
   ]
 }
