@@ -71,12 +71,12 @@
           "foreground": "#FFAB91",
           "template": "{{ .FormattedMs }}",
           "properties": {
-            "always_enabled": true,
-            "style": "austin"
+            "always_enabled": false,
+            "style": "austin",
+            "threshold": 200
           }
         }
-      ],
-      "newline": false
+      ]
     }
   ]
 }
