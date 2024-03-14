@@ -2,12 +2,13 @@
 This guide intends to standardise the way I write C flavoured languages to ensure that I don't freak-out and lose my mind halfway through a project. This guide is very subjective and may contain information that is incorrect or not nessasary.
 
 # Credits
-This guide is losely based on the google and Univercity of Cantubury style guides with suplimentry material taken from a multitued of sources from stack overflow threads to in person conversations.
+This guide is losely based on the google and Univercity of Canterbury style guides with suplimentry material taken from a multitued of sources from stack overflow threads to in person conversations.
 
 # Table of Contents
 - [Example](#Example)
 - [General File Formating](#General-File-Formating)
     - [Indentation and Line Length](#Indentation-and-Line-Length)
+    - [File Structure](#File-Structure)
 - [Comments](#Comments)
     - [File Comments](#File-Comments)
     - [Function Comments](#Function-Comments)
@@ -69,6 +70,16 @@ Indetation is always using **spaces** with an indent of 4 spaces per level.
 
 Lines will not exceed 80 columns unless it is; part of a link, a string literal were new line characters can affect it, or by developer discretion. This limit is to improve writing of code in a split window configuration.
 
+## File Structure
+All Files should follow the same structure:
+
+1. File Comment
+2. Includes
+3. Defines and macros
+4. Structs and typedefs
+5. Global variables
+6. Function Definitions
+
 # Comments
 Comments are vitaly important and should be used anywhere that code may become hard to understand. All files should conform to the doxgen commenting standard even if doxgen is not intended to be run on the code. This is done to improve standardisation and I like the way it looks.
 
@@ -84,13 +95,13 @@ Doxgen Refences:
 
 A line above comment:
 ```c
-//// This is a variable
+/// @brief This is a variable
 int x = 1;
 ```
 
 An inline comment:
 ```c
-int x = 1; ///< This is a variable
+int x = 1; ///< @brief This is a variable
 ```
 
 A block comment. Notice the space before the asterix on a new line this is not nessasary but should be used for readability (The only part required is the `/**`).
