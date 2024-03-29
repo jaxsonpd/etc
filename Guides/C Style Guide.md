@@ -21,21 +21,7 @@ This guide is losely based on the google and Univercity of Canterbury style guid
 - [Header Files](#Header-Files)
   
 # Example
-The easiest way to start off is with an example below is an example of a c header and source file with the styles implemented correctly. These files along with templates can be found in the same folder as this guide.
-
-```c
-/**
- * @Brief An example header file
- *
- */
-```
-
-```c
-/**
- *
- *
- */
-```
+The easiest way to start off is with an example these can be found in the same folder as the guide.
 
 # General File Formating
 This section details the general formating of files.
