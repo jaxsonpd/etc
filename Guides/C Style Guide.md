@@ -163,8 +163,8 @@ All constants both macros and `const` should be commented with doxgen notation a
 
 | Function | Naming Convetion |
 | -------- | ---------------- |
-| Exposed Functions | `PFX_camelCase` |
-| Local Functions & Macros | `camelCase` |
+| Exposed Functions | `PFX_snake_case` |
+| Local Functions & Macros | `snake_case` |
 
 Where the PFX is a three letter abreviation for the module
 
