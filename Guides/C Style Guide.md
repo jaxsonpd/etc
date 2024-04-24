@@ -146,7 +146,7 @@ All constants both macros and `const` should be commented with doxgen notation a
 
 | Type | Naming Convetion |
 | ----- | ---------------- |
-| Files | `PFX_PascalCase` | 
+| Files | `PFX_snake_case` | 
 | Structs | `PFX_PascalCase` |
 | Types | `camelCase_t` |
 
@@ -165,6 +165,7 @@ All constants both macros and `const` should be commented with doxgen notation a
 | -------- | ---------------- |
 | Exposed Functions | `PFX_snake_case` |
 | Local Functions & Macros | `snake_case` |
+| Macros | `ALL_CAPS` |
 
 Where the PFX is a three letter abreviation for the module
 
