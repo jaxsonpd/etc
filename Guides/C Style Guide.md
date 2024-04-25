@@ -167,8 +167,6 @@ All constants both macros and `const` should be commented with doxgen notation a
 | Local Functions & Macros | `snake_case` |
 | Macros | `ALL_CAPS` |
 
-Where the PFX is a three letter abreviation for the module
-
 # Functions
 All functions should be commented as described in the previous sections. Were possible functions should be definied before their use without the use of pre declerations. Functions should contain first the decliration of their local variables then the return variable if applicable can be precided by 'r_' then the code. Functions should aim to contain less than 10 lines of actual code (not including variable assignment etc.), but this is not a hard rule.  
 
