@@ -146,24 +146,24 @@ All constants both macros and `const` should be commented with doxgen notation a
 
 | Type | Naming Convetion |
 | ----- | ---------------- |
-| Files | `PFX_snake_case` | 
-| Structs | `PFX_PascalCase` |
-| Types | `camelCase_t` |
+| Files | `snake_case` | 
+| Structs | `PascalCase` |
+| Types | `snake_case_t` |
 
 | Variable | Naming Convetion |
 | -------- | ---------------- |
-| Pointers | `p_camelCase` |
-| Global Variables | `g_camelCase` |
-| Const Variables | `c_camelCase` |
-| Return Variables | `r_camelCase` |
-| Local Variables | `camelCase` |
+| Pointers | `p_snake_case` |
+| Global Variables | `g_snake_case` |
+| Const Variables | `c_snake_case` |
+| Return Variables | `r_snake_case` |
+| Local Variables | `snake_case` |
 | Defines | `ALL_CAPS` |
-| Enums | `camelCase_e` |
+| Enums | `snake_case_e` |
 | Enum Members | `ALL_CAPS` |
 
 | Function | Naming Convetion |
 | -------- | ---------------- |
-| Exposed Functions | `PFX_snake_case` |
+| Exposed Functions | `snake_case` |
 | Local Functions & Macros | `snake_case` |
 | Macros | `ALL_CAPS` |
 
