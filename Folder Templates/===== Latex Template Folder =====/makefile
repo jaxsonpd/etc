@@ -1,5 +1,7 @@
 # @Breif: MakeFile for processing latex files
 # @Author; Jack Duignan (JackpDuignan@gmail.com)
+# @detail I recomend using TeX Live which can be installed for windows from
+# https://tug.org/texlive/windows.html#install
 
 # Ensure that make is run in powershell to improve compatibility with linux and windows (rm vs del)
 ifeq ($(OS),Windows_NT)
