@@ -156,6 +156,7 @@ All constants both macros and `const` should be commented with doxgen notation a
 | Global Variables | `g_snake_case` |
 | Const Variables | `c_snake_case` |
 | Return Variables | `r_snake_case` |
+| String pointers | `s_snake_case` |
 | Local Variables | `snake_case` |
 | Defines | `ALL_CAPS` |
 | Enums | `snake_case_e` |
