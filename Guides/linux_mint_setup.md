@@ -8,6 +8,7 @@ Install from linux mint. Ensuring:
 - BitLocker is off (if dual booting)
 - EUFI bios enabled
 - Windows fast boot disabled (if dual booting)
+- Disable TPM (and hide it)
 
 # Fix Nvidias BS
 Sometimes Nvidia drivers dont place nice with windows dual boot or linux in general so best to make sure they are downloaded correctly the way to do this is to run:
@@ -15,12 +16,17 @@ Sometimes Nvidia drivers dont place nice with windows dual boot or linux in gene
 ```
 sudo apt-get purge nvidia*
 ```
+
 Then run:
 ```
 sudo apt autoremove
-```
-```
 sudo ubuntu-drivers autoinstall
+```
+
+# Fix Casper
+If boot problems occur then remove this to help remove some of the erros.
+```bash
+sudo apt remove --purge casper
 ```
 
 # Key Installs
