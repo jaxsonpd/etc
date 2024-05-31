@@ -13,12 +13,12 @@ Install from linux mint. Ensuring:
 # Fix Nvidias BS
 Sometimes Nvidia drivers dont place nice with windows dual boot or linux in general so best to make sure they are downloaded correctly the way to do this is to run:
 
-```
+```bash
 sudo apt-get purge nvidia*
 ```
 
 Then run:
-```
+```bash
 sudo apt autoremove
 sudo ubuntu-drivers autoinstall
 ```
@@ -36,22 +36,25 @@ sudo apt remove --purge casper
 - chrome
 - latex
 
+# Fonts
+Install fonts using the nerd font I like CaskaydiaMono. Then move it into ~/.local/share/fonts/NerdFonts/.
+
 # Latex Install
 First get texlive using:
 
-```
+```bash
 sudo apt install texlive-latex-base
 ```
 
 Then install apt-file to search for packages:
 
-```
+```bash
 sudo apt-get install apt-file
 sudo apt-file update
 ```
 Then packages can be searched for using:
 
-```
+```bash
 apt-file search /package.sty
 ```
 
