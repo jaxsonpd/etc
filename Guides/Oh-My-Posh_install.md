@@ -3,7 +3,7 @@
 **Windows**:
 ```
 winget install JanDeDobbeleer.OhMyPosh -s winget
-````
+```
 
 Make sure $PROFILE has been created can use:
 ```
@@ -37,7 +37,7 @@ and remember to add to path using:
 test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
 test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc
-"""
+```
 added to .bashrc
 
 Add a new theme to the prompt using:
