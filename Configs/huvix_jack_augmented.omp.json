@@ -56,7 +56,6 @@
       },
       {
         "alignment": "left",
-        "newline": true,
         "segments": [
           {
             "foreground": "#193549",
