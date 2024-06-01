@@ -29,6 +29,9 @@ If boot problems occur then remove this to help remove some of the erros.
 sudo apt remove --purge casper
 ```
 
+# Fsck Repair
+If boot problems persist then force linux to run a fsck repair if need at boot by following this guide: https://www.linuxuprising.com/2019/05/how-to-force-fsck-filesystem.html. 
+
 # Key Installs
 - neovim
 - oh my posh

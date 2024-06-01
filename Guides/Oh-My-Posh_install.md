@@ -22,31 +22,21 @@ then reload the profile using:
 . $PROFILE
 ```
 
-**Unix**:
-```
-brew install jandedobbeleer/oh-my-posh/oh-my-posh
-```
-if homebrew is not installed run:
+**Unix**: 
+To install simply run: 
 
+```bash 
+sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
+sudo chmod +x /usr/local/bin/oh-my-posh
 ```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-and remember to add to path using:
 
-```
-test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
-test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc
-```
-added to .bashrc
-
-Add a new theme to the prompt using:
-```
+Add a new theme to the prompt by adding the following to .bashrc: 
+```bash 
 eval "$(oh-my-posh init bash --config "https://raw.githubusercontent.com/jaxsonpd/etc/main/Configs/.huvix_JD.omp.json")"
 ```
 
 reload the profile using:
-```
+```bash
 exec bash
 ```
 
