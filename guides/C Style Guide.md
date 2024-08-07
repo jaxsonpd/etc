@@ -165,7 +165,7 @@ All global constants both macros and `const` should be commented with doxygen no
 | ----- | ---------------- |
 | Files | `snake_case` | 
 | Structs | `PascalCase` |
-| Types | `snake_case_t` |
+| Types | `camelCase_t` |
 
 Some of the below variable naming types can be not used in cases where it creates
 overly complex code or names.
@@ -179,7 +179,7 @@ overly complex code or names.
 | String pointers | `s_snake_case` |
 | Local Variables | `snake_case` |
 | Defines | `ALL_CAPS` |
-| Enums | `snake_case_e` |
+| Enums | `camelCase_e` |
 | Enum Members | `ALL_CAPS` |
 
 ALl exposed functions should be prefixed by an identifier from the module eg. `led_`, `serial_` or `pwm_`. 
